@@ -22,7 +22,7 @@ class App extends React.Component {
     // Read
     getCabins = () => {
         axios
-            .get('/cabins')
+            .get('https://cabinfeverbackend.herokuapp.com/cabin')
             .then((res) => {
                 this.setState({
                     cabins: res.data,
