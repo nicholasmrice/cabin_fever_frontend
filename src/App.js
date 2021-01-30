@@ -1,5 +1,12 @@
 import React from 'react'
 import axios from 'axios'
+import mapboxgl from 'mapbox-gl'
+// Components
+import NavBar from './components/nav_bar.js'
+import LandingPage from './components/landing_page.js'
+import FindACabin from './components/find_cabin.js'
+import RecentCabins from './components/recent_cabins.js'
+import SubmitACabin from './components/submit_cabin.js'
 
 class App extends React.Component {
     state = {
@@ -55,37 +62,14 @@ class App extends React.Component {
     }
     render = () => {
         return (
-        <React.Fragment>
-            <h1>Create a Cabin</h1>
-            <form onSubmit={this.createCabin}>
-                <label htmlFor="address">Address</label>
-                <input id="address" type="text" onChange={this.handleChange} value={this.state.address}/>
-                <br/>
-                <label htmlFor="description">Description</label>
-                <input id="description" type="text" onChange={this.handleChange} value={this.state.description}/>
-                <br/>
-                <input type="submit" value="Create New Cabin"/>
-            </form>
-            {this.state.cabins.map((cabin) => {
-                return <div key={cabin.id}>
-                    <h5>Cabin: {cabin.address}</h5>
-                    <h5>Description: {cabin.description}</h5>
-                    <details>
-                        <summary>Edit Cabin</summary>
-                        <form id={cabin.id} onSubmit={this.updateCabin}>
-                            <label htmlFor="address">address</label>
-                            <input type="text" id="address" onChange={this.handleChange}/>
-                            <br />
-                            <label htmlFor="description">description</label>
-                            <input type="text" id="description" onChange={this.handleChange}/>
-                            <br />
-                            <input type="submit" value="Update Cabin"/>
-                        </form>
-                    </details>
-                <button value={cabin.id} onClick={this.deleteCabin}>X</button>
-                </div>
-            })}
-        </React.Fragment>
+            <React.Fragment>
+            <NavBar />
+            <LandingPage />
+            <FindACabin />
+            <RecentCabins state={this.state} handleChange={this.handleChange}
+            getCabins={this.getCabins} updateCabin={this.updateCabin} deleteCabin={this.deleteCabin} />
+            <SubmitACabin state={this.state} handleChange={this.handleChange} getCabins={this.getCabins} createCabin={this.createCabin}/>
+            </React.Fragment>
         )
     }
 
