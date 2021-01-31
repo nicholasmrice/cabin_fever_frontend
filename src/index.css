@@ -49,7 +49,7 @@ h2 {
     font-size: 2em;
     text-align: center;
     margin: 0;
-    padding: 2em;
+    padding: 1.2em;
 }
 
 .mapContainer {
@@ -71,6 +71,15 @@ h2 {
     height: 70vh;
     width: 80%;
     margin: 0 auto;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.cabin-container {
+    border: 1px solid black;
+    border-radius: 1em;
+
 }
 
 /* Submit A Cabin */
