@@ -1,16 +1,17 @@
 import React from 'react'
 import axios from 'axios'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import mapboxgl from 'mapbox-gl'
 // Components
-import Home from './pages/cabins/home.js'
-import ShowCabin from './pages/cabins/show.js'
-import NavBar from './components/nav_bar.js'
+import LandingPage from '../../components/landing_page.js'
+import FindACabin from '../../components/find_cabin.js'
+import RecentCabins from '../../components/recent_cabins.js'
+import SubmitACabin from '../../components/submit_cabin.js'
 
-class App extends React.Component {
+class Home extends React.Component {
     state = {
         address: '',
         description: '',
-        cabins: []
+        cabins: [],
     }
     handleChange = (event) => {
         this.setState({
@@ -60,20 +61,15 @@ class App extends React.Component {
     }
     render = () => {
         return (
-            <Router>
-                <React.Fragment>
-                    <NavBar />
-                    <Switch>
-                        <Route path='/' exact component={Home} />
-                        <Route path='/show' component={ShowCabin} />
-                    </Switch>
-                </React.Fragment>
-            </Router>
+            <React.Fragment>
+                <LandingPage />
+                <FindACabin />
+                <RecentCabins state={this.state} handleChange={this.handleChange}
+                getCabins={this.getCabins} updateCabin={this.updateCabin} deleteCabin={this.deleteCabin} />
+                <SubmitACabin state={this.state} handleChange={this.handleChange} getCabins={this.getCabins} createCabin={this.createCabin}/>
+            </React.Fragment>
         )
     }
-
 }
 
-
-
-export default App;
+export default Home
