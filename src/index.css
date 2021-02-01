@@ -96,7 +96,7 @@ h2 {
 }
 
 /* Show Route Styles */
-#show-cabin-container {
+#show-cabin-container, #new-user-container, #new-session-container {
     background-color: darkgrey;
     height: 20em;
     width: 20em;
