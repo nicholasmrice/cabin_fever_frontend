@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class RecentCabins extends React.Component {
     render = () => {
@@ -22,6 +23,9 @@ class RecentCabins extends React.Component {
                                 <input type="submit" value="Update Cabin"/>
                             </form>
                         </details>
+                        <Link to={`/show/${cabin.id}`} cabinID={cabin.id}>
+                            <h5>View More Details</h5>
+                        </Link>
                     <button value={cabin.id} onClick={this.props.deleteCabin}>X</button>
                     </div>
                 })}

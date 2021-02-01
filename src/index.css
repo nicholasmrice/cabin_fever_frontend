@@ -95,6 +95,14 @@ h2 {
     margin: 0 auto;
 }
 
+/* Show Route Styles */
+#show-cabin-container {
+    background-color: darkgrey;
+    height: 20em;
+    width: 20em;
+    margin: 10em auto;
+}
+
 /* Default Styles */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

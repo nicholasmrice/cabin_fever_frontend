@@ -13,7 +13,7 @@ class App extends React.Component {
                     <NavBar />
                     <Switch>
                         <Route path='/' exact component={Home} />
-                        <Route path='/show' component={ShowCabin} />
+                        <Route path='/show/:id' component={ShowCabin}/>
                     </Switch>
                 </React.Fragment>
             </Router>
