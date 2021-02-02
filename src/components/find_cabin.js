@@ -7,6 +7,8 @@ class FindACabin extends React.Component {
         lng: -95,
         zoom: 3,
     }
+
+
     componentDidMount = () => {
         const map = new mapboxgl.Map({
             container: this.mapContainer,
@@ -22,7 +24,11 @@ class FindACabin extends React.Component {
                 <div id="find-a-cabin-nav">
                     <h2>Find A Cabin</h2>
                 </div>
+                <div>
+                    <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
+                </div>
                 <div ref={el => this.mapContainer = el} className="mapContainer" />
+                <div id='map-geo' className='map'> </div>
 
             </div>
         )
