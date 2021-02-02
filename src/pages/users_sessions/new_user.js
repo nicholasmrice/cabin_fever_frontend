@@ -20,7 +20,6 @@ class NewUser extends React.Component {
                 username: '',
                 password: '',
             })
-            console.log("New user created!")
         })
     }
     render = () => {
@@ -33,6 +32,7 @@ class NewUser extends React.Component {
                     <br/>
                     <label htmlFor="password">Password:</label>
                     <input id="password" type="password" onChange={this.handleChange} value={this.state.password}/>
+                    <br />
                     <input type="submit"/>
                 </form>
             </div>

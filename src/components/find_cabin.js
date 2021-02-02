@@ -15,10 +15,13 @@ class FindACabin extends React.Component {
             zoom: this.state.zoom
         });
     }
+
     render = () => {
         return (
             <div id="find-a-cabin-container">
-                <h2>Find A Cabin</h2>
+                <div id="find-a-cabin-nav">
+                    <h2>Find A Cabin</h2>
+                </div>
                 <div ref={el => this.mapContainer = el} className="mapContainer" />
 
             </div>
