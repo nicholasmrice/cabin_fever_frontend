@@ -11,7 +11,7 @@ body {
     position: absolute;
     z-index: 10;
     top: 0;
-    height: 4rem;
+    height: 10rem;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -26,8 +26,21 @@ body {
 
 #logo {
     font-family: 'Fraunces', serif;
-    font-size: 1.3rem;
+    font-size: 8rem;
     margin-left: 1em;
+    color: yellow;
+}
+
+@keyframes hover{
+  0% {color: yellow;}
+  50% {color: red;}
+  100% {color: yellow;}
+}
+
+#logo:hover {
+    animation-name: hover;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 /* Landing Page */
@@ -36,6 +49,13 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
+}
+
+#find-a-cabin-nav {
+    height: 10rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
 }
 
 /* Find a Cabin / Mapbox */
