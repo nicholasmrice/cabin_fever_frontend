@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import mapboxgl from 'mapbox-gl'
 // Components
 import LandingPage from '../../components/landing_page.js'
 import FindACabin from '../../components/find_cabin.js'
