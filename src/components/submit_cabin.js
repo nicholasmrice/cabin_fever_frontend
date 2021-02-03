@@ -12,6 +12,12 @@ class SubmitACabin extends React.Component {
                     <label htmlFor="description">Description</label>
                     <input id="description" type="text" onChange={this.props.handleChange} value={this.props.state.description}/>
                     <br/>
+                    <label htmlFor="image_url">Image</label>
+                    <input id="image_url" type="text" onChange={this.props.handleChange} value={this.props.state.image_url}/>
+                    <br/>
+                    <label htmlFor="amenities">Amenities</label>
+                    <input id="amenities" type="text" onChange={this.props.handleChange} value={this.props.state.amenities}/>
+                    <br/>
                     <input type="submit" value="Create New Cabin"/>
                 </form>
             </div>

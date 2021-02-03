@@ -10,6 +10,8 @@ class Home extends React.Component {
     state = {
         address: '',
         description: '',
+        image_url: '',
+        amenities: '',
         cabins: [],
     }
     handleChange = (event) => {
@@ -32,7 +34,9 @@ class Home extends React.Component {
                 this.setState({
                     cabins: res.data,
                     address: '',
-                    description: ''
+                    description: '',
+                    image_url: '',
+                    amenities: '',
                 })
             })
             .catch((err) => {console.log(err)})

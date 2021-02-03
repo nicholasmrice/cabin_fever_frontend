@@ -5,6 +5,8 @@ class ShowCabin extends React.Component {
     state = {
         address: '',
         description: '',
+        image_url: '',
+        amenities: '',
     }
     // Read/Show Cabin
     showCabin = () => {
@@ -14,6 +16,8 @@ class ShowCabin extends React.Component {
             this.setState({
                 address: res.data.address,
                 description: res.data.description,
+                image_url: res.data.image_url,
+                amenities: res.data.amenities,
             })
         })
     }
@@ -43,7 +47,9 @@ class ShowCabin extends React.Component {
             <div id="show-cabin-container">
                 <h2>This Cabin</h2>
                 <h3>Address: {this.state.address}</h3>
+                <img src={this.state.image_url} alt="cabin"/>
                 <h5>Description: {this.state.description}</h5>
+                <h5>Amenities: {this.state.amenities}</h5>
             </div>
         )
     }

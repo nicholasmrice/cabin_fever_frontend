@@ -9,6 +9,7 @@ class RecentCabins extends React.Component {
                 <div id="recent-grid-container">
                 {this.props.state.cabins.map((cabin) => {
                     return <div key={cabin.id}>
+                       <img src={cabin.image_url} alt="cabin"/>
                         <h5>Cabin: {cabin.address}</h5>
                         <h5>Description: {cabin.description}</h5>
                         <details>
@@ -19,6 +20,12 @@ class RecentCabins extends React.Component {
                                 <br />
                                 <label htmlFor="description">description</label>
                                 <input type="text" id="description" onChange={this.props.handleChange}/>
+                                <br />
+                                <label htmlFor="image_url">image</label>
+                                <input type="text" id="image_url" onChange={this.props.handleChange}/>
+                                <br />
+                                <label htmlFor="amenities">amenities</label>
+                                <input type="text" id="amenities" onChange={this.props.handleChange}/>
                                 <br />
                                 <input type="submit" value="Update Cabin"/>
                             </form>
