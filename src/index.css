@@ -1,12 +1,129 @@
+/* General Styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: ghostwhite;
 }
 
+/* NavBar */
+#navbar {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    height: 10rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-links-container {
+    margin-right: 1em;
+    display: flex;
+}
+
+#logo {
+    font-family: 'Fraunces', serif;
+    font-size: 8rem;
+    margin-left: 1em;
+    color: yellow;
+}
+
+@keyframes hover{
+  0% {color: yellow;}
+  50% {color: red;}
+  100% {color: yellow;}
+}
+
+#logo:hover {
+    animation-name: hover;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* Landing Page */
+#landing-page {
+    background-image: url('https://64.media.tumblr.com/7df1ec1e42cd6a486ec56081e6198efa/62277d6d655fadf9-6b/s1280x1920/69a57281840c53d7683ca715393bef852708463a.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#find-a-cabin-nav {
+    height: 10rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+/* Find a Cabin / Mapbox */
+#find-a-cabin-container {
+    background-color: black;
+    height: 100vh;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    padding: 1.2em;
+}
+
+.mapContainer {
+    height: 60%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Recent Cabins */
+#recent-cabins-container {
+    background-image: url('https://64.media.tumblr.com/0ea6eb07eeea47b4ce239e4336642baf/55fe339275faa689-cd/s1280x1920/96230e789047de42af6d87a2a204cb9235940c3b.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#recent-grid-container {
+    background-color: darkgrey;
+    height: 70vh;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.cabin-container {
+    border: 1px solid black;
+    border-radius: 1em;
+
+}
+
+/* Submit A Cabin */
+#submit-cabin-container {
+    background-color: black;
+    height: 100vh;
+}
+
+#submit-cabin-form {
+    background-color: darkgrey;
+    height: 20vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Show Route Styles */
+#show-cabin-container, #new-user-container, #new-session-container {
+    background-color: darkgrey;
+    height: 20em;
+    width: 20em;
+    margin: 10em auto;
+}
+
+/* Default Styles */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
